@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <h1>Exercice 2</h1>
-        <script src="script.js"></script>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Exercice 2</h1>
+    <script src="script.js"></script>
+    <script>
+
+        let isTesting = new Boolean(true);
+        let myDate = new Date();
+        const weekDay = "Cest un jour de semaine !"
+        const weekendDay = "C'est un jour de weekend !"
+        let myDay = myDate.getDay();
+        let timeOfDay = myDate.getHours();
+
+        console.log(timeOfDay,myDay);
+
+        if (isTesting==true){
+            dateChoose= prompt("Entrer le jour voulu ou 0 = dimanche et 6 = samedi");
+            timeChoose= prompt("Entrer l'heure voulue de 0 à 23")
+            //myDate.setDay(dateChoose);
+            //myDate.setHours(timeChoose);
+        }
+        
+        
+        if (dateChoose >0 && dateChoose<6) {
+            if (dateChoose == 5) {
+                if (timeChoose < 17) {
+                    console.log(weekDay);
+                }
+                else {
+                    console.log(weekendDay);
+                }
+            }
+            if (dateChoose == 1){
+                if (timeChoose < 9) {
+                    console.log(weekendDay);
+                }
+                else {
+                    console.log(weekDay);
+                }
+            }
+        }
+        else{
+            console.log(weekendDay);
+        }
+
+
+
+
+        </script>
     </body>
 </html>
