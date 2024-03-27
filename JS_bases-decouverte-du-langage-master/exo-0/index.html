@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <h1>Exercice 0</h1>
+
+        <script type="text/javascript">
+
+        /* Section 1 */   
+
+        var name = "Joe"; // La variable name prend la valeur Joe
+        var city = 'London'; // La variable city prend la valeur London
+        var age = 32; // La variable age prend la valeur 32
+        var isRed = true; // La variable isRed prend la valeur true
+        var isOld = age > 80; // La variable isOld prend la valeur age si celle-ci se trouve au dessus de 80
+
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber']; // La variable previousJobs prend comme valeur le tableau suivant ['lawyer', 'developper', 'Professionnal climber']
+
+        function info(height, weight) {
+            if (height > 180) {
+                console.log('Vous êtes grand');
+            }
+            if (weight < 0) {
+                console.log('oups, there is a problem');
+            } else if ( weight < 15) {
+                console.log('Are you that slim ?')
+            } else {
+                console.log('Good !')
+            }
+        }
+
+// La fonction info agit comme ceci = si la variable taille est supérieur à 180, alors la console affichera 'Vous êtes grand'
+//Si la variable weight est inférieur à 0, alors la console affichera 'oups, there is a problem'
+// Sinon, si la variable weight est en dessous de 15 (mais du coup au dessus de 0), alors la console affichera 'Are you that slim ?'
+//Sinon, si la variable weight est au dessus de , alors la console affichera 'Good !'
+
+
+        info(165, 45); // On test la fonction info avec les valeurs 165 et 45 pour height et weight
+
+        var myHeight = 175; //Initialisation de la variable myHeight avec pour valeur 175
+        var myWeight = 86; //Initialisation de la variable myWeight avec pour valeur 86
+
+        info(myHeight, myWeight); //On test la fonction info avec les valeurs MyHeight et MyWeight
+
+        info(myHeight + 15, myWeight - 100); // On test la fonction info avec les valeurs de la variable myHeight+15 et MyWeight-100
+
+        function toUpper(variable) {
+            return variable.toUpperCase();
+        }
+
+        // La fonction toUpper prend une variable en entrée et affiche dans la console cette même variable en majuscule, 'toUpperCase()' est une méthode native de js
+
+        var upperName = toUpper(name); // La variable upperName prend pour valeur le retour de la fonction toUpper avec pour paramètre la variable name , ça donnera JOE
+
+        for (i = 0; i < 3; i = i + 1) {
+            console.log(previousJobs[i]);
+        }
+
+        // Pour i=0 jusqu'à i=3 avec une incrémentation de i de 1, la console affichera l'index i du tableau de la variable 'previousJobs'
+
+        /* Section 2: */
+
+        // afficher la ville dans laquele Joe vit.     
+
+        // afficher si Joe est roux ou pas.
+
+        /* Section 3 */
+
+        // console.log(myVariable);
+
+        </script>
+
+    </body>
+</html>
