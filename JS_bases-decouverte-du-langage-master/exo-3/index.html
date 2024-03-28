@@ -6,5 +6,70 @@
     <body>
         <h1>Exercice 3</h1>
         <script src="exo3.js"></script>
+        <script>
+            const playerInput = prompt("Your choice (rock, paper,scissors) ?").toLowerCase()
+            const answerAllowed = ['rock', 'paper', 'scissors', 'bomb'];
+
+            function getPlayerChoice(playerInput){
+                if (answerAllowed.includes(playerInput)){
+                    console.log('You play --> ' + playerInput);
+                    return playerInput;
+                }
+                else{
+                    console.log('Mauvaise entrée, veuillez recommencer')
+                }
+            }
+
+            function getComputerChoice(){
+                computerChoice = Math.floor(Math.random()*3)
+
+                if (computerChoice == 0){
+                    return 'rock';
+                }
+                else if (computerChoice == 1){
+                    return 'paper';
+                }
+                else {
+                    return 'scissors'
+                }
+            }
+
+
+            function findWinner(playerChoice, computerChoice){
+                console.log('computer play --> ' + computerChoice)
+                if (playerChoice == 'bomb'){
+                    return 'Won'
+                }
+
+
+            if (playerChoice == computerChoice){
+                return 'Tied'
+            }
+            else if (playerChoice == 'rock' && computerChoice == 'scissors'){
+                return 'Won'
+            }
+            else if (playerChoice == 'scissors' && computerChoice == 'paper'){
+                return 'Won'
+            }
+            else if (playerChoice == 'paper' && computerChoice == 'rock'){
+                return 'Won'
+            }
+            else { return 'Lost'}
+            }
+
+
+
+            function playGame(uChoice, computerChoice){
+                console.log(findWinner(uChoice,computerChoice))
+            }
+
+
+
+            playGame(getPlayerChoice(playerInput),getComputerChoice())
+
+
+
+
+        </script>
     </body>
 </html>
